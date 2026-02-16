@@ -5,7 +5,6 @@ export interface ProjectCardProps {
   githubUrl: string;
   techStack: string[];
 }
-
 export interface DesignProjectCardProps {
   title: string;
   description: string;

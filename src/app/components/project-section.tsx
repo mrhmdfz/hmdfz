@@ -35,7 +35,7 @@ export default function ProjectsSection() {
                   : "text-slate-400 hover:text-blue-600"
               }`}
             >
-              {tab === "other" ? "Other Projects" : tab}
+              {tab === "other" ? "Other" : tab}
             </span>
           </button>
         ))}
