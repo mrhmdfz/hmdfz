@@ -16,7 +16,7 @@ export default function Header() {
           text-blue-600 hover:text-blue-800 
           transition-all duration-200 tracking-tight"
         >
-          AHMAD FAUZI
+          HMDFZ
         </h1>
         <div className="flex gap-2 md:gap-3">
           <div

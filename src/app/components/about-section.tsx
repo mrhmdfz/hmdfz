@@ -19,7 +19,7 @@ export default function AboutSection() {
         >
           <div className="absolute inset-0 rounded-full bg-blue-100/40 blur-2xl"></div>
           <Image
-            src="/profile.jpeg"
+            src="/profile.jpg"
             alt="Profile"
             fill
             className="relative object-cover rounded-full border border-dashed border-gray-200"

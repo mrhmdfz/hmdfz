@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <div>
       <div
-        className="flex justify-between items-center 
+        className="flex justify-center items-center 
         bg-base 
         border border-dashed 
         border-r-gray-200 border-t-0 border-l-gray-200 border-b-gray-200 
