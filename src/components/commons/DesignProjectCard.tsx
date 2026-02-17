@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { DesignProjectCardProps } from "@/app/types/project";
+import { DesignProjectCardProps } from "@/types/project";
 
 export default function DesignProjectCard({
   title,
@@ -10,7 +10,7 @@ export default function DesignProjectCard({
   link = "#",
 }: DesignProjectCardProps) {
   return (
-    <div className="relative group rounded-2xl overflow-hidden border border-dashed border-gray-200">
+    <div className="relative group rounded-2xl overflow-hidden border border-dashed dark:border-gray-700  border-gray-200">
       <div className="relative w-full h-60 md:h-80">
         <Image
           src={image}

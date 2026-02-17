@@ -9,14 +9,9 @@ export default function EducationSection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex flex-col gap-5
-  bg-base 
-  border border-dashed 
-  border-r-gray-200 border-t-0 border-l-gray-200 border-b-gray-200 
-  w-full
-  p-6"
+      className="flex flex-col gap-5 bg-base border border-dashed dark:border-gray-700 border-r-gray-200 border-t-0 border-l-gray-200 border-b-gray-200 w-full p-6"
     >
-      <h1 className="text-blue-600 text-sm md:text-md tracking-tight font-semibold">
+      <h1 className="text-blue-600 dark:text-blue-200 text-sm md:text-md tracking-tight font-semibold">
         EDUCATION
       </h1>
 
@@ -43,15 +38,15 @@ export default function EducationSection() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl flex flex-col gap-2"
         >
-          <h2 className="text-gray-700 font-medium text-sm md:text-base">
+          <h2 className="dark:text-gray-400 text-gray-700 font-medium text-sm md:text-base">
             Bachelor of Computer Science
           </h2>
 
-          <p className="text-gray-700 text-sm italic">
+          <p className="dark:text-gray-500 text-gray-700 text-sm italic">
             Institut Teknologi Pagar Alam
           </p>
 
-          <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
+          <p className="dark:text-gray-500 text-gray-600 text-xs md:text-sm leading-relaxed">
             Graduated with honors (GPA 3.88/4.00). Recognized as Best Research
             Graduate and Outstanding Informatics Student for academic excellence
             and research contribution.
@@ -68,7 +63,7 @@ export default function EducationSection() {
               (item, index) => (
                 <span
                   key={index}
-                  className="border border-dashed border-gray-200 px-2 py-1 rounded-md text-blue-600"
+                  className="border border-dashed dark:border-gray-700 dark:text-blue-200 border-gray-200 px-2 py-1 rounded-md text-blue-600"
                 >
                   {item}
                 </span>
@@ -83,7 +78,7 @@ export default function EducationSection() {
             show: { opacity: 1, x: 0 },
           }}
           transition={{ duration: 0.6 }}
-          className="text-gray-400 whitespace-nowrap font-geist text-xs md:text-sm"
+          className="dark:text-gray-500 text-gray-400 whitespace-nowrap font-geist text-xs md:text-sm"
         >
           2021 - 2025
         </motion.span>

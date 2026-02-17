@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Github } from "lucide-react";
-import { ProjectCardProps } from "@/app/types/project";
+import { ProjectCardProps } from "@/types/project";
 
 export default function ProjectCard({
   title,
@@ -10,7 +10,7 @@ export default function ProjectCard({
   techStack,
 }: ProjectCardProps) {
   return (
-    <div className="group border border-dashed border-gray-200 rounded-xl overflow-hidden hover:bg-blue-50 transition-all duration-300">
+    <div className="group border border-dashed dark:border-gray-700 border-gray-200 rounded-xl overflow-hidden dark:hover:bg-gray-900 hover:bg-blue-50 transition-all duration-300">
       <div className="relative w-full h-36 md:h-48 bg-gray-100">
         <Image
           src={image}
@@ -21,24 +21,26 @@ export default function ProjectCard({
       </div>
       <div className="p-5 flex flex-col gap-3">
         <div className="flex justify-between items-center">
-          <h2 className="text-blue-600 font-medium text-sm md:text-lg tracking-tight">
+          <h2 className="dark:text-blue-200 text-blue-600 font-medium text-sm md:text-lg tracking-tight">
             {title}
           </h2>
           <a
             href={githubUrl}
             target="_blank"
-            className="flex items-center gap-1 text-blue-600 border border-dashed border-gray-200 px-3 py-1 rounded-md hover:bg-primary hover:text-blue-800 hover:border-primary transition-all duration-300 text-xs md:text-sm"
+            className="flex items-center gap-1 dark:text-blue-200 text-blue-600 dark:border-gray-700 border border-dashed border-gray-200 px-3 py-1 rounded-md hover:bg-primary dark:hover:bg-gray-800 dark:hover:text-blue-200 hover:text-blue-800  transition-all duration-300 text-xs md:text-sm"
           >
             <Github size={16} />
             GitHub
           </a>
         </div>
-        <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+        <p className="dark:text-gray-400 text-gray-600 text-sm leading-relaxed">
+          {description}
+        </p>
         <div className="flex flex-wrap gap-2 text-[11px]">
           {techStack.map((tech, index) => (
             <span
               key={index}
-              className="border border-dashed border-gray-200 px-2 py-1 rounded-md text-blue-600"
+              className="dark:border-gray-700 dark:text-blue-200 border border-dashed border-gray-200 px-2 py-1 rounded-md text-blue-600"
             >
               {tech}
             </span>

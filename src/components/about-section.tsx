@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="relative bg-base border border-dashed border-gray-200 border-t-0 p-10 overflow-hidden">
-      <h1 className="text-blue-600 text-sm tracking-tight font-semibold mb-12">
+    <section className="relative bg-base border border-dashed dark:border-gray-700 border-gray-200 border-t-0 p-10 overflow-hidden">
+      <h1 className="dark:text-blue-200 text-blue-600 text-sm tracking-tight font-semibold mb-12">
         ABOUT
       </h1>
       <div className="flex flex-col items-center text-center gap-5 max-w-3xl mx-auto">
@@ -17,12 +17,12 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="relative w-44 h-44 md:w-52 md:h-52"
         >
-          <div className="absolute inset-0 rounded-full bg-blue-100/40 blur-2xl"></div>
+          <div className="absolute inset-0 rounded-full bg-blue-100/40 dark:bg-blue-100/20 blur-2xl"></div>
           <Image
             src="/profile.jpg"
             alt="Profile"
             fill
-            className="relative object-cover rounded-full border border-dashed border-gray-200"
+            className="relative object-cover rounded-full border border-dashed dark:border-gray-700 dark:grayscale dark:hover:grayscale-0 transition-all duration-300 border-gray-200"
           />
         </motion.div>
         <motion.h2
@@ -30,7 +30,7 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="font-brico text-2xl md:text-3xl text-blue-600 leading-tight tracking-tight"
+          className="font-brico text-2xl md:text-3xl dark:text-blue-200 text-blue-600 leading-tight tracking-tight"
         >
           Crafting meaningful digital systems with clarity and purpose.
         </motion.h2>
@@ -39,7 +39,7 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           viewport={{ once: true }}
-          className="font-geist text-gray-600 text-sm md:text-base leading-relaxed"
+          className="font-geist text-gray-600 dark:text-gray-500 text-sm md:text-base leading-relaxed"
         >
           I am a Junior Web Developer specializing in Laravel, Next.js, React,
           and CodeIgniter. With experience in graphic design and IT support, I

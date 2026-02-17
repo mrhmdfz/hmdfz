@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Bricolage_Grotesque } from "next/font/google";
+import { Providers } from "./providers";
 import "./globals.css";
 
 const fontGeistMono = Geist_Mono({
@@ -24,19 +25,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="en"
-      className={`
-        ${fontGeistMono.variable}
-        ${fontBricolageGrotesque.variable}
-      `}
+      suppressHydrationWarning
+      className={`${fontGeistMono.variable} ${fontBricolageGrotesque.variable}`}
     >
-      <body className="font-sans antialiased min-h-screen bg-gray-50">
-        <main className="max-w-6xl mx-auto sm:px-6 lg:px-8">{children}</main>
+      <body className="font-sans antialiased min-h-screen bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
+        <Providers>
+          <main className="max-w-6xl mx-auto sm:px-6 lg:px-8">{children}</main>
+        </Providers>
       </body>
     </html>
   );

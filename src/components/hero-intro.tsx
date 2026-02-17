@@ -5,14 +5,7 @@ export default function HeroIntro() {
   const roles = ["JUNIOR WEB DEVELOPER", "GRAPHIC DESIGNER", "EDITOR"];
 
   return (
-    <section
-      className="flex flex-col gap-6
-      bg-gray-50
-      border border-dashed border-gray-200
-      border-t-0
-      w-full
-      p-6 overflow-hidden"
-    >
+    <section className="flex flex-col gap-6 bg-base border border-dashed dark:border-gray-700 border-gray-200 border-t-0 w-full p-6 overflow-hidden">
       <motion.div
         className="flex flex-wrap gap-3"
         initial="hidden"
@@ -34,7 +27,7 @@ export default function HeroIntro() {
               show: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.6 }}
-            className="text-blue-600 rounded-md font-brico text-[10px] md:text-[13px] border-gray-200 border border-dashed px-3 py-2 hover:bg-blue-50 transition-all duration-300"
+            className="dark:text-blue-200 text-blue-600 rounded-md font-brico text-[10px] md:text-[13px] dark:border-gray-700 border-gray-200 border border-dashed px-3 py-2 hover:bg-blue-50 transition-all duration-300"
           >
             {role}
           </motion.div>
@@ -44,7 +37,7 @@ export default function HeroIntro() {
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.3 }}
-        className="text-xl md:text-[28px] tracking-tight leading-tight text-blue-600 text-left font-brico font-medium max-w-3xl"
+        className="text-xl md:text-[28px] tracking-tight leading-tight dark:text-blue-200 text-blue-600 text-left font-brico font-medium max-w-3xl"
       >
         I{" "}
         <motion.span
