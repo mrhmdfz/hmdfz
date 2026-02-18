@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { ProjectCardProps } from "@/types/project";
 
 export default function ProjectCard({
   title,
   description,
   image,
+  demoUrl,
   githubUrl,
   techStack,
 }: ProjectCardProps) {
@@ -21,17 +22,29 @@ export default function ProjectCard({
       </div>
       <div className="p-5 flex flex-col gap-3">
         <div className="flex justify-between items-center">
-          <h2 className="dark:text-blue-200 text-blue-600 font-medium text-sm md:text-lg tracking-tight">
+          <h2 className="dark:text-blue-200 text-blue-600 font-medium text-[12px] md:text-lg tracking-tight">
             {title}
           </h2>
-          <a
-            href={githubUrl}
-            target="_blank"
-            className="flex items-center gap-1 dark:text-blue-200 text-blue-600 dark:border-gray-700 border border-dashed border-gray-200 px-3 py-1 rounded-md hover:bg-primary dark:hover:bg-gray-800 dark:hover:text-blue-200 hover:text-blue-800  transition-all duration-300 text-xs md:text-sm"
-          >
-            <Github size={16} />
-            GitHub
-          </a>
+          <div className="flex gap-1 md:gap-2">
+            {demoUrl && (
+              <a
+                href={demoUrl}
+                target="_blank"
+                className="flex items-center gap-1 dark:text-blue-200 text-blue-600 dark:border-gray-700 border border-dashed border-gray-200 px-2 md:px-3 py-1 rounded-md hover:bg-primary dark:hover:bg-gray-800 dark:hover:text-blue-200 hover:text-blue-800  transition-all duration-300 text-[10px] md:text-sm"
+              >
+                <ExternalLink size={14} />
+                Demo
+              </a>
+            )}
+            <a
+              href={githubUrl}
+              target="_blank"
+              className="flex items-center gap-1 dark:text-blue-200 text-blue-600 dark:border-gray-700 border border-dashed border-gray-200 px-2 md:px-3 py-1 rounded-md hover:bg-primary dark:hover:bg-gray-800 dark:hover:text-blue-200 hover:text-blue-800  transition-all duration-300 text-[10px] md:text-sm"
+            >
+              <Github size={14} />
+              GitHub
+            </a>
+          </div>
         </div>
         <p className="dark:text-gray-400 text-gray-600 text-sm leading-relaxed">
           {description}

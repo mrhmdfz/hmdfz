@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import ProjectCard from "./commons/ProjectCard";
 import DesignProjectCard from "./commons/DesignProjectCard";
+import OtherProjectCard from "./commons/OtherProjectCard";
 
 export default function ProjectsSection() {
   const [activeTab, setActiveTab] = useState("website");
@@ -89,6 +90,7 @@ export default function ProjectsSection() {
                   initial={{ opacity: 0, y: 25 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex flex-col gap-5"
                 >
                   <ProjectCard
                     title="Sistem Manajemen Tugas Akhir"
@@ -96,6 +98,14 @@ export default function ProjectsSection() {
                     image="/projects/project-1.png"
                     githubUrl="https://github.com/mrhmdfz/sista"
                     techStack={["CodeIgniter", "MySQL", "TailwindCSS"]}
+                  />
+                  <ProjectCard
+                    title="BlueLotus"
+                    description="Free to watch chinese drama streaming website with modern design and user-friendly interface."
+                    image="/projects/project-2.png"
+                    demoUrl="https://bluelotus.vercel.app"
+                    githubUrl="https://github.com/mrhmdfz/bluelotus"
+                    techStack={["NextJS", "TailwindCSS"]}
                   />
                 </motion.div>
               )}
@@ -105,6 +115,7 @@ export default function ProjectsSection() {
                   initial={{ opacity: 0, y: 25 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex flex-col gap-5"
                 >
                   <DesignProjectCard
                     title="KKN Magazine Design"
@@ -120,18 +131,18 @@ export default function ProjectsSection() {
                   initial={{ opacity: 0, y: 25 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="border border-dashed dark:border-gray-700 border-gray-200 p-6 rounded-xl dark:hover:bg-gray-900 hover:bg-blue-50/40 transition"
+                  className="flex flex-col gap-5"
                 >
-                  <h2 className="dark:text-blue-200 text-blue-600 font-medium mb-2">
-                    Additional Projects
-                  </h2>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Reprehenderit rem, dolore vitae aliquid enim qui cupiditate
-                    quo asperiores quasi facere magni eos temporibus saepe
-                    aliquam voluptatem, voluptas nemo voluptatibus mollitia sint
-                    nulla officia.
-                  </p>
+                  <OtherProjectCard
+                    title="Python Object Detector"
+                    description="Object detection using COCO SSD Trained Model + Python OpenCV to detect and classify objects in real-time video streams. The model is trained on the COCO dataset, which contains 50+ common object categories."
+                    link="https://github.com/mrhmdfz/object_detector"
+                  />
+                  <OtherProjectCard
+                    title="Whatsapp Chatbot"
+                    description="mrhmdfz-bot is a chatbot built using JavaScript and the Baileys library, designed to provide automated responses and engage in conversations on WhatsApp."
+                    link="https://github.com/mrhmdfz/mrhmdfz-bot"
+                  />
                 </motion.div>
               )}
             </motion.div>
