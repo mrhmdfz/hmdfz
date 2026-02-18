@@ -27,7 +27,7 @@ export default function HeroIntro() {
               show: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.6 }}
-            className="dark:text-blue-200 text-blue-600 rounded-md font-brico text-[10px] md:text-[13px] dark:border-gray-700 border-gray-200 border border-dashed px-3 py-2 hover:bg-blue-50 transition-all duration-300"
+            className="dark:text-blue-200 text-blue-600 rounded-md font-brico text-[10px] md:text-[13px] dark:border-gray-700 border-gray-200 border border-dashed px-3 py-2 hover:bg-blue-50 dark:hover:bg-gray-900 transition-all duration-300"
           >
             {role}
           </motion.div>

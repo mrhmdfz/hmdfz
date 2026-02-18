@@ -19,4 +19,5 @@ export interface OtherProjectCardProps {
   description: string;
   category?: string;
   link?: string;
+  techStack: string[];
 }

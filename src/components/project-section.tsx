@@ -137,11 +137,13 @@ export default function ProjectsSection() {
                     title="Python Object Detector"
                     description="Object detection using COCO SSD Trained Model + Python OpenCV to detect and classify objects in real-time video streams. The model is trained on the COCO dataset, which contains 50+ common object categories."
                     link="https://github.com/mrhmdfz/object_detector"
+                    techStack={["Python"]}
                   />
                   <OtherProjectCard
                     title="Whatsapp Chatbot"
                     description="mrhmdfz-bot is a chatbot built using JavaScript and the Baileys library, designed to provide automated responses and engage in conversations on WhatsApp."
                     link="https://github.com/mrhmdfz/mrhmdfz-bot"
+                    techStack={["JavaScript"]}
                   />
                 </motion.div>
               )}

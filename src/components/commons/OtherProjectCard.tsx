@@ -5,12 +5,23 @@ export default function OtherProjectCard({
   title,
   description,
   link = "#",
+  techStack = [],
 }: OtherProjectCardProps) {
   return (
     <div className="border border-dashed dark:border-gray-700 border-gray-200 p-6 rounded-xl dark:hover:bg-gray-900 hover:bg-blue-50/40 transition">
       <h2 className="dark:text-blue-200 text-blue-600 font-medium mb-2">
         {title}
       </h2>
+      <div className="flex flex-wrap gap-2 mt-1 mb-2 text-[11px]">
+        {techStack.map((tech, index) => (
+          <span
+            key={index}
+            className="dark:border-gray-700 dark:text-blue-200 border border-dashed border-gray-200 px-2 py-1 rounded-md text-blue-600"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
       <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
         {description}
       </p>
