@@ -15,14 +15,14 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative w-44 h-44 md:w-52 md:h-52"
+          className="relative w-44 h-44 md:w-48 md:h-48"
         >
           <div className="absolute inset-0 rounded-full bg-blue-100/40 dark:bg-blue-100/20 blur-2xl"></div>
           <Image
             src="/profile.jpg"
             alt="Profile"
             fill
-            className="relative object-cover rounded-full border border-dashed dark:border-gray-700 dark:grayscale dark:hover:grayscale-0 transition-all duration-300 border-gray-200"
+            className="relative object-cover rounded-full border border-dashed dark:border-gray-700  transition-all duration-300 border-gray-200"
           />
         </motion.div>
         <motion.h2

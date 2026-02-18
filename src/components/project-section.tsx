@@ -65,7 +65,7 @@ export default function ProjectsSection() {
                 className={`transition ${
                   activeTab === tab
                     ? "text-gray-900"
-                    : "dark:text-slate-300 text-slate-600 hover:text-primary/50"
+                    : "dark:text-slate-300 text-slate-600 dark:hover:text-primary/50 hover:text-slate-800"
                 }`}
               >
                 {tab === "other" ? "Other" : tab}
